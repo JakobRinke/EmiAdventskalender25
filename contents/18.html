@@ -1,0 +1,39 @@
+
+<h3 id="aw"> Ich hoffe mal du bist eine gute Christin </h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<input  name="tuerchen" value="18" type="hidden">
+
+	<input name="password" type="text" placeholder=" An welchem Tag hast du den heiligen Geist empfangen?">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+
+        // An welchem Tag hast du den heiligen Geist empfangen?
+
+		if (pw.toLocaleLowerCase().trim() == "pfingsten") {
+			document.getElementById("aw").innerHTML = `
+				Passend zu Pfingsten ist das hier ein Horny Gutschein. <br>
+				Du kannst ihn an einem Tag deiner Wahl einlösen. Ich komme dann nach Halle und ... bete mit dir. <br> <br>
+				<img src="https://img-9gag-fun.9cache.com/photo/aqjNxAL_460s.jpg" style="width: 60%">
+			`;
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

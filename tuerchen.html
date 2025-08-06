@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Türchen</title>
+</head>
+<body>
+
+    <!-- Back arrow -->
+    <a href="./" class="backArrow">←</a>
+
+    <h1 id="headline"> Türchen n </h1>
+    
+    <div class="tuerchenContent">
+     
+    </div>
+
+    <script>
+
+        var tuerchenContent = document.getElementsByClassName("tuerchenContent")[0];
+        var headline = document.getElementById("headline");
+        var tuerchen = window.location.search.split("=")[1].split("&")[0];
+
+        headline.innerHTML = "Türchen " + tuerchen;
+
+        function setInnerHTML(elm, html) {
+            elm.innerHTML = html;
+            
+            Array.from(elm.querySelectorAll("script"))
+              .forEach( oldScriptEl => {
+                const newScriptEl = document.createElement("script");
+                
+                Array.from(oldScriptEl.attributes).forEach( attr => {
+                  newScriptEl.setAttribute(attr.name, attr.value) 
+                });
+                
+                const scriptText = document.createTextNode(oldScriptEl.innerHTML);
+                newScriptEl.appendChild(scriptText);
+                
+                oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl);
+            });
+          }
+
+        fetch("contents/" + tuerchen + ".html")
+            .then(response => response.text())
+            .then(data => {
+                setInnerHTML(tuerchenContent, data);
+        });
+     
+
+    </script>
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,40 @@
+
+<h3 id="aw"> Wenn du es nicht erkennen kannst, liegt das an dir und definitv an meiner schlechten Zeichnung! </h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<input  name="tuerchen" value="12" type="hidden">
+
+	<input name="password" type="text" placeholder="Was ist das Lösungswort">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+
+        // Rätsel: Pictionary
+
+		if (pw.toLocaleLowerCase().trim() == "eislaufen") {
+			document.getElementById("aw").innerHTML = `
+                Ich weis wir haben das schon letztes mal gemacht <br>
+                aber ist mir egal, weil es ist immernoch furchtbar kitschig <br> <br>
+                Willst du mit mir Eislaufen gehen 👉👈 <br>
+                Ich zahl auch!
+			`;
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

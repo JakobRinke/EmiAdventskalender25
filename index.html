@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Adventskalender für Emi</title>
+</head>
+<body>
+
+
+    <h1 id="headline"> Adventskalender für Emi ❤️</h1>
+    
+    <div class="tuerchenContainerContainer">
+       <div class="tuerchenContainer">
+            <div class="tuerchen">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var tuerchenTemplate = document.getElementsByClassName("tuerchen")[0];
+        var tuerchenContainer = document.getElementsByClassName("tuerchenContainer")[0];
+        
+        tuerchenContainer.innerHTML = "";
+        
+        var dayOfMonth = new Date().getDate();
+        // dayOfMonth = 24;
+
+        for (var i = 1; i <= 24; i+=1) {
+            if (i % 3 != 0) {
+                continue;
+            }
+            var tuerchen = tuerchenTemplate.cloneNode(true);
+            tuerchenContainer.appendChild(tuerchen);
+            tuerchen.innerHTML = i;
+            tuerchen.onclick = function() {
+                window.location = "tuerchen.html?tuerchen=" + this.innerHTML;
+            }
+        }
+
+    </script>
+
+</body>
+
+
+
+
+
+</html>

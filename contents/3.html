@@ -1,0 +1,36 @@
+
+<h3 id="aw"> Wir fangen einfach an, aber glaub mir das nächste Rätsel wird nicht so leicht </h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<input  name="tuerchen" value="3" type="hidden">
+
+	<input name="password" type="text" placeholder="Wo hatten wir unser erstes Date">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "kino") {
+			document.getElementById("aw").innerHTML = `Richtig! Das war unser erstes Date. Aber das nächste Rätsel wird nicht so leicht <br> <br> 
+			Passend dazu erhälst du einen Gutschein für ein mal ins Kino gehen, zu welchem Film du auch immer möchtest. - Ich gebe selbstverständlich aus, obwohl ich ein armer Student bin. <br> <br>
+			 <br> <br> <img src='https://diycarinchen.de/wp-content/uploads/2018/01/kino28129.jpg' style="width: 60%"> 
+			 <br> <br> `;
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

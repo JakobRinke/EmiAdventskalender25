@@ -1,0 +1,81 @@
+
+<h1 id="aw"> Na, doppel Brüche waren doch schon immer dein Ding, oder? </h1>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<input  name="tuerchen" value="9" type="hidden">
+
+	<input name="password" type="text" placeholder="Was ist die Lösung der Gleichung">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "ilovu") {
+			document.getElementById("aw").innerHTML = `
+				Wenn du mich vermisst, dann kannst du hier sehen, wann wir uns wieder sehen. <br> <br>
+				<span id="time_we_see_again"> </span>
+			`;
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+		
+		function update_time_we_see_again() {
+			// next sunday 21:30
+			var next_sunday = new Date();
+			next_sunday.setDate(next_sunday.getDate() + (7 - next_sunday.getDay()) % 7 + (next_sunday.getDay() === 0 ? 7 : 0));
+			next_sunday.setHours(21);
+			next_sunday.setMinutes(30);
+			next_sunday.setSeconds(0);
+
+			// next Friday 21:30
+			var next_friday = new Date();
+			next_friday.setDate(next_friday.getDate() + (5 - next_friday.getDay()) % 7 + (next_friday.getDay() === 0 ? 7 : 0));
+			next_friday.setHours(21);
+			next_friday.setMinutes(30);
+			next_friday.setSeconds(0);
+
+
+			// If its after 21:30 on friday and before 21:30 on sunday we are already seeing us 
+			if (new Date() > next_friday && new Date() < next_sunday) {
+				document.getElementById("time_we_see_again").innerHTML = "Wir sehen uns schon!";
+			} else {
+				// Hours:Minutes:Seconds
+				var time_left = next_friday - Date.now();
+				console.log(time_left);
+				const hours = Math.floor(time_left / 1000 / 60 / 60);
+				time_left -= hours * 1000 * 60 * 60;
+				const minutes = Math.floor(time_left / 1000 / 60);
+				time_left -= minutes * 1000 * 60;
+				const seconds = Math.floor(time_left / 1000);
+				document.getElementById("time_we_see_again").innerHTML = "Wir sehen uns wieder in <br><br>" + hours + ":" + minutes + ":" + seconds;
+			}
+			return new Promise(r => setTimeout(r, 1000));
+		}
+
+		async function update_time_we_see_us_again() {
+			while (true) {
+				await update_time_we_see_again();
+				console.log("update");
+			}
+		}
+
+
+		update_time_we_see_us_again();
+
+
+
+	</script>
+
+
+<script>
+
+
+</script>

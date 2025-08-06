@@ -1,0 +1,88 @@
+/* Cristmas Style */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /* Christmas Like font Color */
+     color: #fff;
+    text-align: center;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d9534f;
+    max-width: 800px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+li {
+    text-align: left;
+}
+
+#headline {
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+.tuerchenContainerContainer {
+    padding: 10px;
+}
+
+/* Gridcontainer with 4 columns */
+.tuerchenContainer {
+    width: 100%;
+    justify-content:space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.backArrow{
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.tuerchen {
+    width: 100%;
+    margin: auto;
+    font-size: 20vw;
+    background-color: #fff;
+    color: red;
+    border: 2px solid #7b141000;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    aspect-ratio: 1/1;
+}
+
+.tuerchen:hover {
+    transform: scale(1.05);
+    border-color: #7b1410;
+    background-color: red;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    float: left;
+}
+
+input {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #7b1410;
+}

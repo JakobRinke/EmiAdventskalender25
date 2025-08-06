@@ -1,0 +1,39 @@
+
+<h3 id="aw"> Wenn du noch keine Idee hast - Es ist eines deiner Lieblingslieder </h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<input  name="tuerchen" value="6" type="hidden">
+
+	<input name="password" type="text" placeholder="Welches Lied sind diese Noten">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "lover") {
+			document.getElementById("aw").innerHTML = `Am Nikolaustag will ich dir einen deiner größten Wünsche erfüllen. <br> <br>
+				Du wolltest mich immer Klavier spielen hören. <br> <br>
+				Also hier ist ein Video von mir, wie ich "Lover" von Taylor Swift spiele. <br> <br>
+				<video controls>
+				  <source src="images/6/lover.mp4" type="video/mp4">
+				</video> 
+			`;
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

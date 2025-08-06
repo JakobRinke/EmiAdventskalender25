@@ -1,0 +1,40 @@
+
+<h3 id="aw"> Physikfrage!!! </h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<input  name="tuerchen" value="15" type="hidden">
+
+	<input name="password" type="text" placeholder="Welches Element kann nie mit Energiegewinn fusioniert oder gespalten werden?">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+
+        // Rätsel: Pictionary
+
+		if (pw.toLocaleLowerCase().trim() == "eisen") {
+			document.getElementById("aw").innerHTML = `
+				Alle Pläne die wir heute haben werden gecancelt. <br> 
+				Heute abend machen wir ein Schokoladenfondue! <br>
+				Ich habe alles Vorbereitet.
+			
+			`;
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

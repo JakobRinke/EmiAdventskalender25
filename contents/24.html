@@ -1,0 +1,35 @@
+
+<h3 id="aw"> Bitte sag mir das du das weist! Eingabe mm-tt Beispiel: 03-05 Wäre der 5. März </h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<input  name="tuerchen" value="24" type="hidden">
+
+	<input name="password" type="text" placeholder="Wann ist unser Hochzeitstag?">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+
+		if (pw.toLocaleLowerCase().trim() == "02-12") {
+			document.getElementById("aw").innerHTML = `
+				Okay mein Tipp für dein Geburtstagsgeschenk: Buch.
+			`;
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>
