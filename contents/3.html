@@ -5,9 +5,11 @@
 
 <form id="fo">
 
+	<h3> Ein Lied war ich dieses Jahr viel gespielt hieß: Skandal im ...</h3>
+
 	<input  name="tuerchen" value="3" type="hidden">
 
-	<input name="password" type="text" placeholder="Wo hatten wir unser erstes Date">
+	<input name="password" type="text" placeholder="Wo war der Skandal?">
 
 	<input type="submit" value="Eingabe">
 </form>
@@ -16,11 +18,10 @@
 
 		var pw = window.location.search.split("&")[1].split("=")[1];
 		
-		if (pw.toLocaleLowerCase().trim() == "kino") {
-			document.getElementById("aw").innerHTML = `Richtig! Das war unser erstes Date. Aber das nächste Rätsel wird nicht so leicht <br> <br> 
-			Passend dazu erhälst du einen Gutschein für ein mal ins Kino gehen, zu welchem Film du auch immer möchtest. - Ich gebe selbstverständlich aus, obwohl ich ein armer Student bin. <br> <br>
-			 <br> <br> <img src='https://diycarinchen.de/wp-content/uploads/2018/01/kino28129.jpg' style="width: 60%"> 
-			 <br> <br> `;
+		if (pw.toLocaleLowerCase().trim() == "sperrbezirk") {
+			document.getElementById("aw").innerHTML = `<video controls>
+				  <source src="images/3.mp4" type="video/mp4">
+				</video>`;
 			fo.style.display = "none";
 		} else if(pw.toLocaleLowerCase().trim() != "") {
 			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";

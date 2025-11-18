@@ -1,0 +1,42 @@
+
+<h3 id="aw" style="display:none">
+Siehst du das? Wir hatten letztens unser 1000 Tage Jubiläum!
+<br><br>
+Deswegen wünsche ich dir einen ganz ganz tollen Tag und freue mich auf die nächsten 1000⁹ Tage mit dir!
+<br><br>
+<span style="font-size:1.4em;color:#e63946;letter-spacing:0.4em;">❤️ ❤️ ❤️</span>
+
+</h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<h3> Wie lange sind wir eigentlich schon zusammen? </h3>
+
+	<input name="tuerchen" value="3" type="hidden">
+
+	<input name="password" type="text" placeholder="Ja wie lange denn?">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "1006") {
+			document.getElementById("aw").style.display = "block";
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

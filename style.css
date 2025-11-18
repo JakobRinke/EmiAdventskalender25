@@ -43,6 +43,7 @@ li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    padding: 20px;
 }
 
 .backArrow{
@@ -51,6 +52,10 @@ li {
     position: absolute;
     font-size: 40px;
     text-decoration: none;
+}
+
+.tuerchenContent {
+    padding: 20px;
 }
 
 .tuerchen {

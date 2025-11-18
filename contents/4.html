@@ -1,0 +1,45 @@
+
+<h3 id="aw" style="display:none">
+	Falsch! Sie sind beide toll!
+	<img 
+	src="/images/4.png" 
+	alt="Loki und Elfi"
+	crossorigin="anonymous"
+	style="width: 60%"
+	>
+
+</h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<h3> Vergleich!?! </h3>
+	<h4> Wer ist eigentlich besser? Die kleine Loki Katze oder der kleine elfi hund </h4>
+
+	<input name="tuerchen" value="3" type="hidden">
+
+	<input name="password" type="text" placeholder="">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "boks" || pw.toLocaleLowerCase().trim() == "elfi") {
+			document.getElementById("aw").style.display = "block";
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

@@ -1,0 +1,45 @@
+
+<h3 id="aw" style="display:none">
+	Liebe Emily, du bist wundervoll — als kleine Überraschung spendiere ich dir eine Tafel dunkler Schokolade.
+	<br> <br>
+	<img 
+	src="/images/1.png" 
+	alt="Schokoladentafel"
+	crossorigin="anonymous"
+>
+
+</h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<h3> Willkommen beim 1. Türchen. Beende den Satz!</h3>
+	<h4> Advent, Advent ein Lichtlein (oder ein Flüchtlingsheim) ... </h4>
+
+	<input name="tuerchen" value="3" type="hidden">
+
+	<input name="password" type="text" placeholder="Wo hatten wir unser erstes Date">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "brennt") {
+			document.getElementById("aw").style.display = "block";
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>
