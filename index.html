@@ -31,6 +31,9 @@
         // dayOfMonth = 24;
 
         for (var i = 1; i <= 24; i+=1) {
+            if (i > dayOfMonth) {
+                break;
+            }
             var tuerchen = tuerchenTemplate.cloneNode(true);
             tuerchenContainer.appendChild(tuerchen);
             tuerchen.innerHTML = i;

@@ -1,31 +1,13 @@
 
-<h1 id="aw"> Na, doppel Brüche waren doch schon immer dein Ding, oder? </h1>
+<h3 id="aw"> 	
+	Wenn du mich vermisst, dann kannst du hier sehen, wann wir uns wieder sehen. <br> <br>
+	<span id="time_we_see_again"> </span>
+			
+</h3>
 
 <br> <br> <br>
 
-<form id="fo">
-
-	<input  name="tuerchen" value="9" type="hidden">
-
-	<input name="password" type="text" placeholder="Was ist die Lösung der Gleichung">
-
-	<input type="submit" value="Eingabe">
-</form>
-
 	<script>
-
-		var pw = window.location.search.split("&")[1].split("=")[1];
-		
-		if (pw.toLocaleLowerCase().trim() == "ilovu") {
-			document.getElementById("aw").innerHTML = `
-				Wenn du mich vermisst, dann kannst du hier sehen, wann wir uns wieder sehen. <br> <br>
-				<span id="time_we_see_again"> </span>
-			`;
-			fo.style.display = "none";
-		} else if(pw.toLocaleLowerCase().trim() != "") {
-			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
-		}
-
 		
 		function update_time_we_see_again() {
 			// next sunday 21:30
@@ -35,10 +17,10 @@
 			next_sunday.setMinutes(30);
 			next_sunday.setSeconds(0);
 
-			// next Friday 21:30
+			// next Friday 19:30
 			var next_friday = new Date();
 			next_friday.setDate(next_friday.getDate() + (5 - next_friday.getDay()) % 7 + (next_friday.getDay() === 0 ? 7 : 0));
-			next_friday.setHours(21);
+			next_friday.setHours(19);
 			next_friday.setMinutes(30);
 			next_friday.setSeconds(0);
 
