@@ -1,5 +1,5 @@
 
-<h3 id="aw"> Bitte sag mir das du das weist! Eingabe mm-tt Beispiel: 03-05 Wäre der 5. März </h3>
+<h3 id="aw"> Du willst einen abstrakten Tipp für deinen Weihnachtsgeschenk? Dann sag mir wo wir nächstes Jahr in den Urlaub fahren. </h3>
 
 <br> <br> <br>
 
@@ -7,7 +7,7 @@
 
 	<input  name="tuerchen" value="24" type="hidden">
 
-	<input name="password" type="text" placeholder="Wann ist unser Hochzeitstag?">
+	<input name="password" type="text" placeholder="">
 
 	<input type="submit" value="Eingabe">
 </form>
@@ -16,7 +16,7 @@
 
 		var pw = window.location.search.split("&")[1].split("=")[1];
 
-		if (pw.toLocaleLowerCase().trim() == "02-12") {
+		if (pw.toLocaleLowerCase().trim() == "magdeburg") {
 			document.getElementById("aw").innerHTML = `
 				Okay mein Tipp für dein Geburtstagsgeschenk: Buch.
 			`;

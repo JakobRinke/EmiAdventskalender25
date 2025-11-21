@@ -1,0 +1,42 @@
+
+<h3 id="aw" style="display:none">
+Okay der war wirklich gemein. Ich wünschte ich könnt dir jetzt sagen das wir nächstes Jahr 
+nach Frankreich reisen, aber das wird wohl nichts. Aber hey, was solls?
+<br> <br>
+Nur noch 8 Tage bis Weihnachten!
+<span style="color:#e74c3c; font-size:1.2em" aria-hidden="true">❤ ❤ ❤</span>
+
+
+</h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<h3> Stell dich selbst auf Französisch vor! </h3>
+
+	<input name="tuerchen" value="3" type="hidden">
+
+	<input name="password" type="text" placeholder="Französisch: Wie heißt du?">
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "je m'appelle emily" || pw.toLocaleLowerCase().trim() == "je m appelle emily") {
+			document.getElementById("aw").style.display = "block";
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

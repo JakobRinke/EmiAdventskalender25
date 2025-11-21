@@ -1,0 +1,42 @@
+
+<h3 id="aw" style="display:none">
+	Okay, das war schwer!
+	<br>
+	Aber du hast recht: Es ist Victoria 2, mit etwa 1350 Stunden Spielzeit.
+	<br> <br>
+	Morgen machen wir deshalb eine Fern-Datenight mit essen und gemeinsam online spielen (aber kein Victoria 2, keine Sorge).
+
+</h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<h3> Okay heute eine schwierige Frage </h3>
+	<h4> Wie heißt das Videospiel, in dem ich die höchste gemessene Spielzeit habe? </h4>
+
+	<input name="tuerchen" value="3" type="hidden">
+
+	<input name="password" type="text" placeholder="Wie heißt das Videospiel?">
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "victoria 2" || pw.toLocaleLowerCase().trim() == "victoria2" || pw.toLocaleLowerCase().trim() == "victoria") {
+			document.getElementById("aw").style.display = "block";
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

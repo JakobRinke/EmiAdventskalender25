@@ -1,32 +1,39 @@
 
-<h3 id="aw"> Physikfrage!!! </h3>
+<h3 id="aw" style="display:none">
+Richtig! Wasserstoff ist das einzige Element, das nicht gespalten werden kann.
+Ich wünsche dir einen tollen Tag und viel Spaß in deinen Vorlesungen heute! 
+
+</h3>
 
 <br> <br> <br>
 
 <form id="fo">
 
-	<input  name="tuerchen" value="15" type="hidden">
+	<h3> Physikfrage: Welches Element kann nie gespalten werden? </h3>
 
-	<input name="password" type="text" placeholder="">
+	<input name="tuerchen" value="3" type="hidden">
 
+	<input name="password" type="text" placeholder="Wie heißt das Element?">
 	<input type="submit" value="Eingabe">
 </form>
 
 	<script>
 
 		var pw = window.location.search.split("&")[1].split("=")[1];
-
-        // Rätsel: Pictionary
-
-		if (pw.toLocaleLowerCase().trim() == "") {
-			document.getElementById("aw").innerHTML = `
-				Alle Pläne die wir heute haben werden gecancelt. <br> 
-				Heute abend machen wir ein Schokoladenfondue! <br>
-				Ich habe alles Vorbereitet.
-			
-			`;
+		
+		if (pw.toLocaleLowerCase().trim() == "wasserstoff") {
+			document.getElementById("aw").style.display = "block";
 			fo.style.display = "none";
-		} else if(pw.toLocaleLowerCase().trim() != "") {
+		} else if (pw.toLocaleLowerCase().trim() == "atom") {
+			document.getElementById("aw").style.display = "block";
+			document.getElementById("aw").innerHTML += "<br> An sich richtig, aber Atome sind keine chemische Elemente. Versuch es nochmal.";
+		} else if (pw.toLocaleLowerCase().trim() == "helium") {
+			document.getElementById("aw").style.display = "block";
+			document.getElementById("aw").innerHTML += "<br> Helium ist ein Edelgas und sehr stabil, aber es kann gespalten werden. Versuch es nochmal.";
+		} else if (pw.toLocaleLowerCase().trim() == "eisen") {
+			document.getElementById("aw").style.display = "block";
+			document.getElementById("aw").innerHTML += "<br> Eisen braucht zwar Engerie egal ob man es spalten oder fusionieren will, aber es kann gespalten werden. Versuch es nochmal.";
+		} else {
 			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
 		}
 
