@@ -15,7 +15,7 @@ Nur noch 8 Tage bis Weihnachten!
 
 	<h3> Stell dich selbst auf Französisch vor! </h3>
 
-	<input name="tuerchen" value="3" type="hidden">
+	<input name="tuerchen" value="16" type="hidden">
 
 	<input name="password" type="text" placeholder="Französisch: Wie heißt du?">
 	<input type="submit" value="Eingabe">
@@ -24,8 +24,8 @@ Nur noch 8 Tage bis Weihnachten!
 	<script>
 
 		var pw = window.location.search.split("&")[1].split("=")[1];
-		
-		if (pw.toLocaleLowerCase().trim() == "je m'appelle emily" || pw.toLocaleLowerCase().trim() == "je m appelle emily") {
+		console.log(pw);
+		if (pw.toLocaleLowerCase().trim() == "je+m%27appelle+emily" || pw.toLocaleLowerCase().trim() == "je+m+appelle+emily") {
 			document.getElementById("aw").style.display = "block";
 			fo.style.display = "none";
 		} else if(pw.toLocaleLowerCase().trim() != "") {

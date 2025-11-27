@@ -1,0 +1,45 @@
+
+<h3 id="aw" style="display:none">
+	Cool, du hast mein Logikrätsel gelöst! Hoffentlich beim ersten Versuch XD - 
+	<br> 
+	<br>
+	Aber was cooles habe ich heute leider nicht für dich.
+	<br>
+	Ich wollte dir nur zeigen, dass ich mir Mühe gebe, auch wenn ich nicht so gut darin bin, Rätsel zu bauen, die dir Spaß machen.
+	<br>
+	<span style="color:#e74c3c; font-size:1.2em" aria-hidden="true">❤ ❤ ❤</span>
+
+</h3>
+
+<br> <br> <br>
+
+<form id="fo">
+
+	<h3> Wenn für alle A ein B existiert aus dem C folgt, muss es dann ein C geben? </h3>
+
+	<input name="tuerchen" value="19" type="hidden">
+
+	<input name="password" type="text" placeholder="Gibt es ein C?">
+
+	<input type="submit" value="Eingabe">
+</form>
+
+	<script>
+
+		var pw = window.location.search.split("&")[1].split("=")[1];
+		
+		if (pw.toLocaleLowerCase().trim() == "nein") {
+			document.getElementById("aw").style.display = "block";
+			fo.style.display = "none";
+		} else if(pw.toLocaleLowerCase().trim() != "") {
+			document.getElementById("aw").innerHTML += "<br> Leider falsch. Ich bin entsetzt! Versuch es nochmal.";
+		}
+
+
+	</script>
+
+
+<script>
+
+
+</script>

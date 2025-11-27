@@ -1,12 +1,14 @@
 
 <h3 id="aw" style="display:none">
-	Liebe Emily, du bist wundervoll — als kleine Überraschung spendiere ich dir eine Tafel dunkler Schokolade.
+	
+	Ja richtig! Pauline hat uns verkuppelt. 
+	<br> 
+
+	Nun manche Menschen sind gut darin Menschen zu verkuppeln, haben aber leider kein Glück in der Liebe selbst.
+	<br>
+	Das ist eben so. Deswegen bin ich umso dankbarer, dass sie uns zusammengebracht hat!
 	<br> <br>
-	<img 
-	src="/images/1.png" 
-	alt="Schokoladentafel"
-	crossorigin="anonymous"
->
+	-> Völlig egal wie wir jetzt inzwischen zu ihr stehen. Danke Pauline!
 
 </h3>
 
@@ -14,12 +16,11 @@
 
 <form id="fo">
 
-	<h3> Willkommen beim 1. Türchen. Beende den Satz!</h3>
-	<h4> Advent, Advent ein Lichtlein (oder ein Flüchtlingsheim) ... </h4>
+	<h3> Wer hat uns mit einander verkuppelt? </h3>
 
-	<input name="tuerchen" value="3" type="hidden">
+	<input name="tuerchen" value="8" type="hidden">
 
-	<input name="password" type="text" placeholder="Wo hatten wir unser erstes Date">
+	<input name="password" type="text" placeholder="Wer war es?">
 
 	<input type="submit" value="Eingabe">
 </form>
@@ -28,7 +29,7 @@
 
 		var pw = window.location.search.split("&")[1].split("=")[1];
 		
-		if (pw.toLocaleLowerCase().trim() == "brennt") {
+		if (pw.toLocaleLowerCase().trim() == "pauline") {
 			document.getElementById("aw").style.display = "block";
 			fo.style.display = "none";
 		} else if(pw.toLocaleLowerCase().trim() != "") {
